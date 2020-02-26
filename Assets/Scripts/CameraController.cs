@@ -21,8 +21,8 @@ public class CameraController : MonoBehaviour
 
     void Update() 
     {
-        rotationX += Input.GetAxis("Mouse X") * sensitivityX;
-        rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
+        rotationX += Input.GetAxisRaw("Mouse X") * sensitivityX;
+        rotationY += Input.GetAxisRaw("Mouse Y") * sensitivityY;
 
         rotationY = Mathf.Clamp(rotationY, minY, maxY);
 
